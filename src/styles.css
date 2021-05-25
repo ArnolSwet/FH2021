@@ -1,0 +1,81 @@
+:root {
+  --color-dark: #C7D59F;
+  --color-light: #050505;
+  --color-text-green: #8FB339;
+  --color-borders: #B7CE63;
+}
+
+* { 
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  letter-spacing: .05rem;
+}
+
+ion-icon {
+  color: var(--color-light) !important;
+}
+
+.lead-xl {
+  font-size: 1.75rem;
+}
+
+.nav-link {
+  margin-left: 2rem;
+}
+
+.sideways {
+  writing-mode: vertical-lr;
+  display: block;
+  margin: 3.5rem 0;
+  transform: rotate(-180deg);
+}
+
+.btn-primary {
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  border-radius: 0;
+  color: var(--color-light);
+  padding: .7rem 2.5rem;
+  font-size: 1.25rem;
+}
+
+.text-green {
+  color: var(--color-text-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: 1px solid var(--color-light);
+}
+
+.navbar {
+  min-height: 5rem;
+}
+
+.border-right {
+  border-right: 1px solid rgba(256, 256, 256, 0.3) !important;
+}
+
+.header-up {
+  background-color: var(--color-borders);
+  color: var(--color-dark);
+  border: 1px solid var(--color-light);
+}
+
+@media (max-width: 991.98px) {
+  .content {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .sideways {
+    margin: 2rem 0;
+  }
+  .lead-xl {
+    font-size: 1.2rem;
+  }
+}
