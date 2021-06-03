@@ -3,8 +3,10 @@
 :root {
   --color-dark: #C7D59F;
   --color-light: #050505;
+  --background-light: #FFFFFF;
   --color-text-green: #8FB339;
   --color-borders: #B7CE63;
+  --color-button: #485842;
 }
 
 * { 
@@ -46,8 +48,24 @@ ion-icon {
   font-size: 1.25rem;
 }
 
+.button-color {
+    background-color: var(--color-button);
+}
+
 .text-green {
   color: var(--color-text-green);
+}
+
+.background-light{
+    background-color: var(--background-light);
+}
+
+.background-green{
+    background-color: var(--color-borders);
+}
+
+.border-green{
+    border-color: var(--color-borders);
 }
 
 .btn-primary:hover {
@@ -87,6 +105,14 @@ ion-icon {
 body {
     background: linear-gradient(to top, rgb(253, 213, 152) 10%, gold 150%) no-repeat;
     height: 710px
+}
+
+main {
+  padding-top: 90px;
+}
+
+main .card {
+  margin-bottom: 20px;
 }
 
 .results {

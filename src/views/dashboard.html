@@ -1,0 +1,344 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CDN Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+
+    />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <!-- Ionic Icons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <title>Panacea</title>
+  </head>
+  <body>
+    <section>
+      <div class="row no-gutters header-up">
+        <div class="col-lg-1 border-right d-none d-lg-block">
+          <div class="d-flex h-100">
+            <div class="align-self-center mx-auto">
+              <i class="lead-xl">
+                <ion-icon name="search"></ion-icon>
+              </i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-11">
+          <nav class="navbar navbar-expand-lg">
+            <a target="_self" class="navbar-brand text-green font-weight-bold" href="../index.html"
+              >PANA <span class="font-weight-bold">CEA</span></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+            <ion-icon name="menu-sharp"></ion-icon
+              >
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a target="_self" class="nav-link text-dark lead" href="./centres.html" target="_blank">Centres <ion-icon name="home"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-dark lead" href="./especialistes.html" target="_blank">Especialistes <ion-icon name="person"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-dark lead" href="./mutualitats.html" target="_blank">Mutualitats <ion-icon name="body"></ion-icon></a>
+              
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-green lead" href="./area_privada.html" target="_blank">Area Privada <ion-icon name="contact"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-dark lead" href="./forum.html" target="_blank">Forum <ion-icon name="megaphone"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-dark lead" href="./medicaments.html" target="_blank">Medicaments <ion-icon name="medkit"></ion-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a target="_self" class="nav-link text-dark lead" href="./about_us.html" target="_blank">Sobre Nosaltres <ion-icon name="help"></ion-icon></a>
+                </li>
+                <li class="nav-item d-none">
+                  <a target="_self" class="nav-link text-dark lead-xl" href="#"
+                    ><ion-icon name="menu-sharp"></ion-icon
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <script>
+      $(document).ready(function() {
+          var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+        
+        /*  className colors
+        
+        className: default(transparent), important(red), chill(pink), success(green), info(blue)
+        
+        */    
+        
+          
+        /* initialize the external events
+        -----------------------------------------------------------------*/
+      
+        $('#external-events div.external-event').each(function() {
+        
+          // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+          // it doesn't need to have a start or end
+          var eventObject = {
+            title: $.trim($(this).text()) // use the element's text as the event title
+          };
+          
+          // store the Event Object in the DOM element so we can get to it later
+          $(this).data('eventObject', eventObject);
+          
+          // make the event draggable using jQuery UI
+          $(this).draggable({
+            zIndex: 999,
+            revert: true,      // will cause the event to go back to its
+            revertDuration: 0  //  original position after the drag
+          });
+          
+        });
+      
+      
+        /* initialize the calendar
+        -----------------------------------------------------------------*/
+        
+        var calendar =  $('#calendar').fullCalendar({
+          header: {
+            left: 'title',
+            center: 'agendaDay,agendaWeek,month',
+            right: 'prev,next today'
+          },
+          editable: true,
+          firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+          selectable: true,
+          defaultView: 'month',
+          
+          axisFormat: 'h:mm',
+          columnFormat: {
+                    month: 'ddd',    // Mon
+                    week: 'ddd d', // Mon 7
+                    day: 'dddd M/d',  // Monday 9/7
+                    agendaDay: 'dddd d'
+                },
+                titleFormat: {
+                    month: 'MMMM yyyy', // September 2009
+                    week: "MMMM yyyy", // September 2009
+                    day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
+                },
+          allDaySlot: false,
+          selectHelper: true,
+          select: function(start, end, allDay) {
+            var title = prompt('Event Title:');
+            if (title) {
+              calendar.fullCalendar('renderEvent',
+                {
+                  title: title,
+                  start: start,
+                  end: end,
+                  allDay: allDay
+                },
+                true // make the event "stick"
+              );
+            }
+            calendar.fullCalendar('unselect');
+          },
+          droppable: true, // this allows things to be dropped onto the calendar !!!
+          drop: function(date, allDay) { // this function is called when something is dropped
+          
+            // retrieve the dropped element's stored Event Object
+            var originalEventObject = $(this).data('eventObject');
+            
+            // we need to copy it, so that multiple events don't have a reference to the same object
+            var copiedEventObject = $.extend({}, originalEventObject);
+            
+            // assign it the date that was reported
+            copiedEventObject.start = date;
+            copiedEventObject.allDay = allDay;
+            
+            // render the event on the calendar
+            // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+            $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+            
+            // is the "remove after drop" checkbox checked?
+            if ($('#drop-remove').is(':checked')) {
+              // if so, remove the element from the "Draggable Events" list
+              $(this).remove();
+            }
+            
+          },
+          
+          events: [
+            {
+              title: 'All Day Event',
+              start: new Date(y, m, 1)
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d-3, 16, 0),
+              allDay: false,
+              className: 'info'
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d+4, 16, 0),
+              allDay: false,
+              className: 'info'
+            },
+            {
+              title: 'Meeting',
+              start: new Date(y, m, d, 10, 30),
+              allDay: false,
+              className: 'important'
+            },
+            {
+              title: 'Lunch',
+              start: new Date(y, m, d, 12, 0),
+              end: new Date(y, m, d, 14, 0),
+              allDay: false,
+              className: 'important'
+            },
+            {
+              title: 'Birthday Party',
+              start: new Date(y, m, d+1, 19, 0),
+              end: new Date(y, m, d+1, 22, 30),
+              allDay: false,
+            },
+            {
+              title: 'Click for Google',
+              start: new Date(y, m, 28),
+              end: new Date(y, m, 29),
+              url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
+              className: 'success'
+            }
+          ],      
+        });
+        
+        
+      });
+
+    </script>
+    <style>
+
+      body {
+        margin-bottom: 40px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        background:url(http://www.digiphotohub.com/wp-content/uploads/2015/09/bigstock-Abstract-Blurred-Background-Of-92820527.jpg);
+      }
+        
+      #wrap {
+        width: 1100px;
+        margin: 0 auto;
+        }
+        
+      #external-events {
+        float: left;
+        width: 150px;
+        padding: 0 10px;
+        text-align: left;
+        }
+        
+      #external-events h4 {
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 1em;
+        }
+        
+      .external-event { /* try to mimick the look of a real event */
+        margin: 10px 0;
+        padding: 2px 4px;
+        background: #3366CC;
+        color: #fff;
+        font-size: .85em;
+        cursor: pointer;
+        }
+        
+      #external-events p {
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #666;
+        }
+        
+      #external-events p input {
+        margin: 0;
+        vertical-align: middle;
+        }
+
+      #calendar {
+    /*    float: right; */
+            margin: 0 auto;
+        width: 900px;
+        background-color: #FFFFFF;
+          border-radius: 6px;
+            box-shadow: 0 1px 2px #C3C3C3;
+        -webkit-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
+        }
+
+    </style>
+    </head>
+    <body>
+    <div id='wrap'>
+
+    <div id='calendar'></div>
+
+    <div style='clear:both'></div>
+    </div>
+    </body>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../components/dashboard.js"></script>
+  </body>
+</html>
