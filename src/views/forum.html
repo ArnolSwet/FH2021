@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
 
     <!-- Google Fonts -->
     <link
@@ -22,6 +22,9 @@
 
     <!-- Ionic Icons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
     <title>Panacea</title>
   </head>
@@ -39,7 +42,7 @@
         </div>
         <div class="col-lg-11">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand text-green font-weight-bold" href="/src/index.html"
+            <a class="navbar-brand text-green font-weight-bold" href="../index.html"
               >PANA <span class="font-weight-bold">CEA</span></a
             >
             <button
@@ -58,26 +61,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link text-dark lead" href="/src/views/centres.html" target="_blank">Centres <ion-icon name="home"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./centres.html" target="_blank">Centres <ion-icon name="home"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/especialistes.html" target="_blank">Especialistes <ion-icon name="person"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./especialistes.html" target="_blank">Especialistes <ion-icon name="person"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/mutualitats.html" target="_blank">Mutualitats <ion-icon name="body"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./mutualitats.html" target="_blank">Mutualitats <ion-icon name="body"></ion-icon></a>
               
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/area_privada.html" target="_blank">Area Privada <ion-icon name="contact"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./area_privada.html" target="_blank">Area Privada <ion-icon name="contact"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-green lead" href="/src/views/forum.html" target="_blank">Forum <ion-icon name="megaphone"></ion-icon></a>
+                  <a class="nav-link text-green lead" href="./forum.html" target="_blank">Forum <ion-icon name="megaphone"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/medicaments.html" target="_blank">Medicaments <ion-icon name="medkit"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./medicaments.html" target="_blank">Medicaments <ion-icon name="medkit"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/about_us.html" target="_blank">Sobre Nosaltres <ion-icon name="help"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./about_us.html" target="_blank">Sobre Nosaltres <ion-icon name="help"></ion-icon></a>
                 </li>
                 <li class="nav-item d-none">
                   <a class="nav-link text-dark lead-xl" href="#"
@@ -90,8 +93,44 @@
         </div>
       </div>
 
-      <div class="row no-gutters text-dark" id="centres">
-        <h1>Benvingut al Forum de PANACEA
+      <div class="row no-gutters text-dark d-flex justify-content-center align-items-center rows" id="centres">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-6 col-12 pb-4">
+                <h1>Fòrum</h1>
+                <div class="comment mt-4 text-justify float-left"> <img src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="text-justify darker mt-4 float-right"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKrEWsrAgKx_6dg36oHtZISVqZo1z5WGCNQ&usqp=CAU" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="comment mt-4 text-justify"> <img src="https://icons.iconarchive.com/icons/visualpharm/must-have/256/User-icon.png" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+                <div class="darker mt-4 text-justify"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzhD5VF9ivHzz3WGZgAGN3PNmmxdKXiH8HXO9zb7VMvtarsMB5On6QPsyiE2CmoVOU8g8&usqp=CAU" alt="" class="rounded-circle" width="40" height="40">
+                    <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+                <form id="algin-form">
+                    <div class="form-group">
+                        <h4>Deixa un comentari</h4> <label for="message">Missatge</label> <textarea name="msg" id="" msg cols="30" rows="5" class="form-control" style="background-color: white;"></textarea>
+                    </div>
+                    <div class="form-group"> <label for="name">Nom</label> <input type="text" name="name" id="fullname" class="form-control"> </div>
+                    <div class="form-group"> <label for="email">Email</label> <input type="text" name="email" id="email" class="form-control"> </div>
+                    <div class="form-group">
+                        <p class="text-secondary">Si tens un <a href="#" class="alert-link">avatar</a> la teva adreça l'utilitzarà per mostrar a la teva foto de perfil.</p>
+                    </div>
+                    <div class="form-inline"> <input type="checkbox" name="check" id="checkbx" class="mr-1"> <label for="subscribe">Subscriume a la newletter</label> </div>
+                    <div class="form-group"> <button type="button" id="post" class="btn">Publica el comentari</button> </div>
+                </form>
+            </div>
+        </div>
+    </div>
       </div>
     </section>
 
@@ -100,7 +139,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="/src/components/especialistesd.js"></script>
+    <script src="./components/especialistesd.js"></script>
   </body>
 </html>
   </body>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
 
     <!-- Google Fonts -->
     <link
@@ -22,6 +22,9 @@
 
     <!-- Ionic Icons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
     <title>Panacea</title>
   </head>
@@ -39,7 +42,7 @@
         </div>
         <div class="col-lg-11">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand text-green font-weight-bold" href="/src/index.html"
+            <a class="navbar-brand text-green font-weight-bold" href="../index.html"
               >PANA <span class="font-weight-bold">CEA</span></a
             >
             <button
@@ -58,26 +61,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link text-dark lead" href="/src/views/centres.html" target="_blank">Centres <ion-icon name="home"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./centres.html" target="_blank">Centres <ion-icon name="home"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/especialistes.html" target="_blank">Especialistes <ion-icon name="person"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./especialistes.html" target="_blank">Especialistes <ion-icon name="person"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-green lead" href="/src/views/mutualitats.html" target="_blank">Mutualitats <ion-icon name="body"></ion-icon></a>
+                  <a class="nav-link text-green lead" href="./mutualitats.html" target="_blank">Mutualitats <ion-icon name="body"></ion-icon></a>
               
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/area_privada.html" target="_blank">Area Privada <ion-icon name="contact"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./area_privada.html" target="_blank">Area Privada <ion-icon name="contact"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/forum.html" target="_blank">Forum <ion-icon name="megaphone"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./forum.html" target="_blank">Forum <ion-icon name="megaphone"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/medicaments.html" target="_blank">Medicaments <ion-icon name="medkit"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./medicaments.html" target="_blank">Medicaments <ion-icon name="medkit"></ion-icon></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark lead" href="/src/views/about_us.html" target="_blank">Sobre Nosaltres <ion-icon name="help"></ion-icon></a>
+                  <a class="nav-link text-dark lead" href="./about_us.html" target="_blank">Sobre Nosaltres <ion-icon name="help"></ion-icon></a>
                 </li>
                 <li class="nav-item d-none">
                   <a class="nav-link text-dark lead-xl" href="#"
@@ -91,11 +94,54 @@
       </div>
 
       <div class="row no-gutters text-dark" id="centres">
-          <ul>
-            <li class="nav-item">Mutuam</li>
-            <li class="nav-item">Axa</li>
-            <li class="nav-item">Mafre</li>
-          </ul>
+        <div class="d-flex align-items-center justify-content-between py-4 results">
+          <div>Showing 1-40 of 350</div>
+          <div> <span>Peu: </span> <select name="price" id="price">
+                  <option value="l2h" selected>baix a alt</option>
+                  <option value="l2h">alt a baix</option>
+              </select> </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
+                <div class="card"> <img class="card-img-top" src="data:image/jpeg;base64,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">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="h6 font-weight-bold">Grup Mutuam</div>
+                                <div class="text-muted">78€/mes</div>
+                            </div>
+                            <div class="btn"><span class="far fa-heart"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
+                <div class="card"> <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/AXA_Logo.svg/320px-AXA_Logo.svg.png">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="h6 font-weight-bold">Axa</div>
+                                <div class="text-muted">155€/mes</div>
+                            </div>
+                            <div class="btn"><span class="far fa-heart"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2">
+                <div class="card"> <img class="card-img-top" src="https://icrcat.com/wp-content/uploads/2015/03/400_mapfre.jpg">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="h6 font-weight-bold">Mapfre</div>
+                                <div class="text-muted">$96€/mes</div>
+                            </div>
+                            <div class="btn"><span class="far fa-heart"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -104,7 +150,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="/src/components/especialistesd.js"></script>
+    <script src="./components/especialistesd.js"></script>
   </body>
 </html>
   </body>
